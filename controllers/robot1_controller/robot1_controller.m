@@ -25,23 +25,22 @@ for i = 0:5
 s=11*i
   while wb_robot_step(TIME_STEP) ~= -1
     t = wb_robot_get_time()
-    throttle(0,0,0,0);
     vidlice_down;
-
-    throttle(1,1,1,1);
-    if t>3+s
+    throttle(1,1,1,1)
+    if t > 3+s
     vidlice_up;
     end
-    if t>5+s
-    throttle(0,0,0,0);
+    if t > 4.5+s
+    throttle(1,1,1,1);
     end
-    if t>6+s
+
+    if t > 6+s
     vidlice_down;
     end
-    if t>8+s
+    if t > 7.5+s
     throttle(-1,-1,-1,-1);
     end
-    if t>11+s
+    if t> 9+s
     break
     end
   end
@@ -56,6 +55,7 @@ end
 
 %%FUNCTIONS
 function []=vidlice_down()
+throttle(0,0,0,0)
 vidlice = wb_robot_get_device('vidlice');
 kloub1 = wb_robot_get_device('kloub1');
 kloub2 = wb_robot_get_device('kloub2');
@@ -71,6 +71,7 @@ wb_motor_set_position(vidlice,pi/3);
 end
 
 function []=vidlice_up()
+throttle(0,0,0,0)
 vidlice = wb_robot_get_device('vidlice');
 kloub1 = wb_robot_get_device('kloub1');
 kloub2 = wb_robot_get_device('kloub2');
