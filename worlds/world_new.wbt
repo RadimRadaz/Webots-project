@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.9991227776044181 -0.03973043748877276 -0.013235090063275747 0.5376587237451032
-  position -0.09546496174544616 1.6222759001238671 3.1000711953617683
+  orientation -0.9147214793670622 0.3752516416825446 0.14990270377511045 0.8312875933150107
+  position 0.48366091161169844 2.0654766965149682 2.5956261561552685
 }
 TexturedBackground {
   texture "factory"
@@ -40,8 +40,8 @@ Wall {
   size 0.05 0.25 0.4
 }
 TinkerbotsBase {
-  translation -0.0034032 0.0252833 1.26705
-  rotation 0 1 0 0
+  translation -0.00339981 0.0252833 0.12705
+  rotation 0 1 0 3.14159
   controller "robot1_controller"
   upSlot TinkerbotsCube {
   }
@@ -107,7 +107,7 @@ TinkerbotsBase {
   }
 }
 WoodenPallet {
-  translation 0.000599961 0 0.970006
+  translation 0.580484 -2.60998e-14 0.981606
   rotation 9.58947e-07 1 9.58979e-09 -0.01999530717958642
   size 0.05 0.035 0.05
   mass 0.005
