@@ -54,16 +54,17 @@ s=43*i
     end
   end
   % read the sensors, e.g.:
-  %  rgb = wb_camera_get_image(camera);
+  %rgb = wb_camera_get_image(camera);
   % Process here sensor data, images, etc.
   % send actuator commands, e.g.:
-
   % if your code plots some graphics, it needs to flushed like this:
   drawnow;
 end
 
-while(wb_robot_step(32) ~= -1)
-petr = wb_robot_get_time()
+reset = wb_robot_get_time();
+while(wb_robot_step(TIME_STEP) ~= -1)
+petr = wb_robot_get_time()-reset
+throttle(-5,-5,-5,-5)
 end
 %%FUNCTIONS
 function []=vidlice_down()
