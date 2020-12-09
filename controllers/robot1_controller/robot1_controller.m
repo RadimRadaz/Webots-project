@@ -62,6 +62,9 @@ s=43*i
   drawnow;
 end
 
+while(wb_robot_step(32) ~= -1)
+petr = wb_robot_get_time()
+end
 %%FUNCTIONS
 function []=vidlice_down()
 throttle(0,0,0,0)
