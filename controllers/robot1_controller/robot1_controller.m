@@ -63,7 +63,7 @@ end
 
 reset = wb_robot_get_time();
 while(wb_robot_step(TIME_STEP) ~= -1)
-petr = wb_robot_get_time()-reset
+r = wb_robot_get_time()-reset
 throttle(-5,-5,-5,-5)
 end
 %%FUNCTIONS
