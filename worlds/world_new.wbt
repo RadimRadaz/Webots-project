@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.9147214793670622 0.3752516416825446 0.14990270377511045 0.8312875933150107
-  position 0.48366091161169844 2.0654766965149682 2.5956261561552685
+  orientation 0.9999154649128001 -0.012973288982423854 0.0008699432150763621 5.915929720906313
+  position 0.17543217417403872 1.2438167026517823 4.01466222930047
 }
 TexturedBackground {
   texture "factory"
@@ -12,7 +12,7 @@ TexturedBackground {
 TexturedBackgroundLight {
   texture "mars"
 }
-Floor {
+DEF __ Floor {
   tileSize 1 1
   appearance Parquetry {
     type "light strip"
@@ -40,8 +40,29 @@ Wall {
   size 0.05 0.25 0.4
 }
 TinkerbotsBase {
-  translation -0.00339981 0.0252833 0.12705
-  rotation 0 1 0 3.14159
+  hidden position_3_0 -0.28799356925878267
+  hidden translation_5 0 -0.0056805800167501206 0.0008236862073729735
+  hidden rotation_5 -1 0 0 0.2879935692587832
+  hidden position_6_0 -0.23560482364483804
+  hidden translation_8 0 -0.00466862285113603 0.0005525333096093946
+  hidden rotation_8 -1 0 0 0.23560482364483745
+  hidden position_9_0 0.7592037190621683
+  hidden translation_11 0 0.01376688107326473 0.005492312881972352
+  hidden rotation_11 0.9999999999999999 0 0 0.7592037190621683
+  hidden position_19_0 43.67904450262718
+  hidden translation_21 -0.0059725202178130266 0 0.0009125957173896082
+  hidden rotation_21 0 -1 0 5.979932659549659
+  hidden position_24_0 43.67904449525706
+  hidden translation_26 -0.005972520358489469 0 0.0009125957614077654
+  hidden rotation_26 0 -1 0 5.97993265217954
+  hidden position_30_0 43.679044495384204
+  hidden translation_32 -0.005972520356062606 0 0.000912595760648411
+  hidden rotation_32 0 -1 0 5.979932652306685
+  hidden position_35_0 43.6790445048964
+  hidden translation_37 -0.005972520174499422 0 0.0009125957038365884
+  hidden rotation_37 0 -1 0 5.979932661818884
+  translation -0.00339981 0.0283558 0.014741
+  rotation -0.9999981793676445 0.001828020327888297 0.0005473600981788702 -0.001775307179586072
   controller "robot1_controller"
   upSlot TinkerbotsCube {
   }
@@ -54,9 +75,11 @@ TinkerbotsBase {
           name "vidlice"
           ASlot TinkerbotsFinger {
             rotation 0 0 1 -1.570795613280012
+            name "finger1"
           }
           DSlot TinkerbotsFinger {
             rotation 0 0 1 3.141592653589793
+            name "finger2"
           }
         }
       }
@@ -107,8 +130,8 @@ TinkerbotsBase {
   }
 }
 WoodenPallet {
-  translation 0.580484 -2.60998e-14 0.981606
-  rotation 9.58947e-07 1 9.58979e-09 -0.01999530717958642
-  size 0.05 0.035 0.05
+  translation 0.5804840212520483 -6.720742190303997e-07 0.9816051378287715
+  rotation 3.207493372569604e-07 0.999999999999895 3.272327984184193e-07 1.550800088806173
+  size 0.075 0.045 0.05
   mass 0.005
 }

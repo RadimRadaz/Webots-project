@@ -21,26 +21,35 @@ TIME_STEP = 64; %ms
 % and leave the loop when Webots signals the termination
 
 %% MAIN ACTIONS
-for i = 0:5
-s=11*i
+for i = 0:2
+s=43*i
   while wb_robot_step(TIME_STEP) ~= -1
     t = wb_robot_get_time()
     vidlice_down;
-    throttle(1,1,1,1)
-    if t > 3+s
+    throttle(-3,-3,-3,-3);
+    if t > 8+s
+    throttle(-1,-1,2,2);
+    end
+    if t > 11.205+s
+    throttle(3,3,3,3);
+    end
+    if t > 17.205+s
     vidlice_up;
     end
-    if t > 4.5+s
-    throttle(1,1,1,1);
+     if t > 19.5+s
+    throttle(-3,-3,-3,-3);
     end
-
-    if t > 6+s
+     if t > 26+s
+    throttle(2,2,-1,-1);
+    end
+     if t > 29.205+s
+    throttle(3,3,3,3);
+    end
+    if t > 37.205+s
     vidlice_down;
     end
-    if t > 7.5+s
-    throttle(-1,-1,-1,-1);
-    end
-    if t> 9+s
+
+    if t> 40+s
     break
     end
   end
@@ -100,6 +109,19 @@ wb_motor_set_velocity(FLwheel, FL);
 wb_motor_set_velocity(FRwheel, FR);
 wb_motor_set_velocity(BRwheel, BR);
 wb_motor_set_velocity(BLwheel, BL);
+end
+
+function [] = turn(FL, BL, FR, BR)
+FLwheel = wb_robot_get_device('FLwheel');
+FRwheel = wb_robot_get_device('FRwheel');
+BLwheel = wb_robot_get_device('BLwheel');
+BRwheel = wb_robot_get_device('BRwheel');
+
+wb_motor_set_position(FLwheel, FL*2*pi);
+wb_motor_set_position(FRwheel, FR*2*pi);
+wb_motor_set_position(BLwheel, BL*2*pi);
+wb_motor_set_position(BRwheel, BR*2*pi);
+
 end
 
 % cleanup code goes here: write data to files, etc.
