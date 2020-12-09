@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.9493692676850917 0.30387678898753484 0.07973011156205718 5.656777813625961
-  position -0.20558808701234277 1.198991873391869 2.7998548334453117
+  orientation -0.09932677301606851 -0.9931373111324414 -0.06174522976585646 1.5702948835759527
+  position -0.8325928514288067 0.10802184025156261 1.1161000881865775
 }
 TexturedBackground {
   texture "factory"
@@ -16,21 +16,35 @@ Floor {
   tileSize 1 1
 }
 TinkerbotsBase {
-  hidden position_2_0 168.3697790021903
-  hidden translation_4 -0.019138529622729834 0 0.014193393083745686
-  hidden rotation_4 0 -1 0 5.006961015521065
-  hidden position_7_0 147.86459992953485
-  hidden translation_9 -0.004164214027647046 0 0.03956167992611952
-  hidden rotation_9 0 1 0 2.931847442775228
-  hidden position_13_0 228.09859928726257
-  hidden translation_15 0.018900456688137446 0 0.02654008692448658
-  hidden rotation_15 0 -1 0 1.9039282287974597
-  hidden position_18_0 258.44945997211744
-  hidden translation_20 0.014877666354463125 0 0.006633809673460604
-  hidden rotation_20 0 0.9999999999999999 0 5.444322929425193
   translation -0.0034032 0.0252833 1.26705
-  rotation 0.03842061338323406 -0.9992363480687254 0.007111762477273876 -0.08562530717958605
+  rotation 0 1 0 0
   controller "robot1_controller"
+  upSlot TinkerbotsCube {
+  }
+  downSlot TinkerbotsCube {
+    upSlot TinkerbotsPivot {
+      name "kloub1"
+      slot TinkerbotsPivot {
+        name "kloub2"
+        slot TinkerbotsPivot {
+          name "vidlice"
+          ASlot TinkerbotsFinger {
+            rotation 0 0 1 -1.570795613280012
+          }
+          DSlot TinkerbotsFinger {
+            rotation 0 0 1 3.141592653589793
+          }
+        }
+      }
+    }
+    frontSlot TinkerbotsDistanceSensor {
+      rotation 0 0 1 3.141592653589793
+      name "ds"
+      numberOfRays 7
+      backSlot TinkerbotsCube {
+      }
+    }
+  }
   leftSlot TinkerbotsCube {
     leftSlot TinkerbotsMotor {
       rotation 0 0 1 1.5707996938995747
@@ -69,6 +83,8 @@ TinkerbotsBase {
   }
 }
 WoodenPallet {
-  translation 0.21 0 1.48
-  size 0.08 0.008 0.08
+  translation 0 0 1
+  rotation 0 1 0 -0.02
+  size 0.05 0.035 0.05
+  mass 0.005
 }
