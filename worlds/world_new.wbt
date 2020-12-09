@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.578598799805451 -0.8002976040029943 -0.15731234500432006 5.683837927120362
-  position 0.5288323070012041 0.4019103000070938 2.078126367766648
+  orientation 0.9493692676850917 0.30387678898753484 0.07973011156205718 5.656777813625961
+  position -0.20558808701234277 1.198991873391869 2.7998548334453117
 }
 TexturedBackground {
   texture "factory"
@@ -16,13 +16,25 @@ Floor {
   tileSize 1 1
 }
 TinkerbotsBase {
-  hidden linearVelocity_0 1.9248713714196699e-10 2.9785676198573294e-05 1.4941873237900685e-07
-  hidden angularVelocity_0 -1.0206507943771663e-07 -5.305798194659012e-12 -7.332955410184563e-09
-  translation 1.6812091965893308e-09 0.026162232704803372 1.31999998123687
-  rotation 0.9983685741773222 2.866294795969276e-06 0.057098074283860864 -1.1214986424396964e-06
+  hidden position_2_0 168.3697790021903
+  hidden translation_4 -0.019138529622729834 0 0.014193393083745686
+  hidden rotation_4 0 -1 0 5.006961015521065
+  hidden position_7_0 147.86459992953485
+  hidden translation_9 -0.004164214027647046 0 0.03956167992611952
+  hidden rotation_9 0 1 0 2.931847442775228
+  hidden position_13_0 228.09859928726257
+  hidden translation_15 0.018900456688137446 0 0.02654008692448658
+  hidden rotation_15 0 -1 0 1.9039282287974597
+  hidden position_18_0 258.44945997211744
+  hidden translation_20 0.014877666354463125 0 0.006633809673460604
+  hidden rotation_20 0 0.9999999999999999 0 5.444322929425193
+  translation -0.0034032 0.0252833 1.26705
+  rotation 0.03842061338323406 -0.9992363480687254 0.007111762477273876 -0.08562530717958605
+  controller "robot1_controller"
   leftSlot TinkerbotsCube {
     leftSlot TinkerbotsMotor {
       rotation 0 0 1 1.5707996938995747
+      name "BLwheel"
       frontSlot TinkerbotsAxle {
         endSlot TinkerbotsWheel {
         }
@@ -30,6 +42,7 @@ TinkerbotsBase {
     }
     rightSlot TinkerbotsMotor {
       rotation 0 0 1 -1.5707996938995747
+      name "FLwheel"
       frontSlot TinkerbotsAxle {
         endSlot TinkerbotsWheel {
         }
@@ -38,15 +51,17 @@ TinkerbotsBase {
   }
   rightSlot TinkerbotsCube {
     leftSlot TinkerbotsMotor {
-      rotation 0 0 1 1.5708003061004252
-      frontSlot TinkerbotsAxle {
+      rotation 0 0 1 -1.5707950010791611
+      name "FRwheel"
+      backSlot TinkerbotsAxle {
         endSlot TinkerbotsWheel {
         }
       }
     }
     rightSlot TinkerbotsMotor {
-      rotation 0 0 1 -1.5707996938995747
-      frontSlot TinkerbotsAxle {
+      rotation 0 0 1 1.5707996938995747
+      name "BRwheel"
+      backSlot TinkerbotsAxle {
         endSlot TinkerbotsWheel {
         }
       }
@@ -54,6 +69,6 @@ TinkerbotsBase {
   }
 }
 WoodenPallet {
-  translation 0 0 1.48
+  translation 0.21 0 1.48
   size 0.08 0.008 0.08
 }
