@@ -3,45 +3,17 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-<<<<<<< Updated upstream
   orientation 0.578598799805451 -0.8002976040029943 -0.15731234500432006 5.683837927120362
   position 0.5288323070012041 0.4019103000070938 2.078126367766648
-=======
-  orientation -0.8396033764395445 0.5399508409361262 0.059323348217095985 0.3371195328908099
-  position 0.7110719538995243 1.2917372098064546 2.9004117148203763
->>>>>>> Stashed changes
 }
 TexturedBackground {
   texture "factory"
 }
 TexturedBackgroundLight {
-  texture "mars"
+  texture "stadium"
 }
 Floor {
   tileSize 1 1
-  appearance Parquetry {
-    type "light strip"
-  }
-}
-Wall {
-  size 0.05 0.25 0.75
-}
-Wall {
-  translation 0.33 0.01 0
-  name "wall(1)"
-  size 0.05 0.25 0.75
-}
-Wall {
-  translation 0.36 0.28 -0.03
-  rotation 0 0 1 1.5708
-  name "wall(3)"
-  size 0.05 0.4 0.8
-}
-Wall {
-  translation 0.17 0.01 -0.4
-  rotation 0 1 0 1.5708
-  name "wall(2)"
-  size 0.05 0.25 0.384
 }
 TinkerbotsBase {
   hidden linearVelocity_0 1.9248713714196699e-10 2.9785676198573294e-05 1.4941873237900685e-07
