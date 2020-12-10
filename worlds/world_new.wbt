@@ -68,10 +68,8 @@ TinkerbotsBase {
   rotation -0.9999981793676445 0.001828020327888297 0.0005473600981788702 -0.001775307179586072
   controller "robot1_controller"
   upSlot TinkerbotsCube {
-    name "cube1"
   }
   downSlot TinkerbotsCube {
-    name "cube2"
     upSlot TinkerbotsPivot {
       name "kloub1"
       slot TinkerbotsPivot {
@@ -89,18 +87,8 @@ TinkerbotsBase {
         }
       }
     }
-<<<<<<< Updated upstream
-=======
-    frontSlot TinkerbotsCube {
-      name "cube3"
-      frontSlot TinkerbotsCube {
-        name "cube4"
-      }
-    }
->>>>>>> Stashed changes
   }
   leftSlot TinkerbotsCube {
-    name "cube5"
     leftSlot TinkerbotsMotor {
       rotation 0 0 1 1.5707996938995747
       name "BLwheel"
@@ -119,7 +107,6 @@ TinkerbotsBase {
     }
   }
   rightSlot TinkerbotsCube {
-    name "cube6"
     leftSlot TinkerbotsMotor {
       rotation 0 0 1 -1.5707950010791611
       name "FRwheel"

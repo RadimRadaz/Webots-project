@@ -48,6 +48,7 @@ s=43*i
     if t > 37.205+s
     vidlice_down;
     end
+
     if t> 40+s
     break
     end
@@ -65,9 +66,8 @@ while(wb_robot_step(TIME_STEP) ~= -1)
 petr = wb_robot_get_time()-reset
 throttle(-5,-5,-5,-5)
 end
-
 %%FUNCTIONS
-function [] = vidlice_down()
+function []=vidlice_down()
 throttle(0,0,0,0)
 vidlice = wb_robot_get_device('vidlice');
 kloub1 = wb_robot_get_device('kloub1');
@@ -77,12 +77,13 @@ wb_motor_set_velocity(kloub1,1);
 wb_motor_set_velocity(kloub2,2);
 wb_motor_set_velocity(vidlice,2);
 
+
 wb_motor_set_position(kloub1,0);
 wb_motor_set_position(kloub2,-pi/6);
 wb_motor_set_position(vidlice,pi/3);
 end
 
-function [] = vidlice_up()
+function []=vidlice_up()
 throttle(0,0,0,0)
 vidlice = wb_robot_get_device('vidlice');
 kloub1 = wb_robot_get_device('kloub1');
@@ -114,7 +115,7 @@ wb_motor_set_velocity(BRwheel, BR);
 wb_motor_set_velocity(BLwheel, BL);
 end
 
-function [] = turn(FL, BL, FR, BR) %optional
+function [] = turn(FL, BL, FR, BR)
 FLwheel = wb_robot_get_device('FLwheel');
 FRwheel = wb_robot_get_device('FRwheel');
 BLwheel = wb_robot_get_device('BLwheel');
@@ -124,6 +125,7 @@ wb_motor_set_position(FLwheel, FL*2*pi);
 wb_motor_set_position(FRwheel, FR*2*pi);
 wb_motor_set_position(BLwheel, BL*2*pi);
 wb_motor_set_position(BRwheel, BR*2*pi);
+
 end
 
 % cleanup code goes here: write data to files, etc.
