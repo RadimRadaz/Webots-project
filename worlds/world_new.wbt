@@ -22,6 +22,8 @@ DEF __ Floor {
 TinkerbotsBase {
   translation -0.26 0.02 0.46
   name "Tinkerbots(1)"
+  upASlot TinkerbotsBrickAdapter {
+  }
 }
 AdvertisingBoard {
   translation 1.53 -0.01 0.78
@@ -72,8 +74,10 @@ TinkerbotsBase {
   rotation -0.9999981793676445 0.001828020327888297 0.0005473600981788702 -0.001775307179586072
   controller "robot1_controller"
   upSlot TinkerbotsCube {
+    name "cube1"
   }
   downSlot TinkerbotsCube {
+    name "cube2"
     upSlot TinkerbotsPivot {
       name "kloub1"
       slot TinkerbotsPivot {
@@ -92,11 +96,14 @@ TinkerbotsBase {
       }
     }
     frontSlot TinkerbotsCube {
+      name "cube5"
       frontSlot TinkerbotsCube {
+        name "cube6"
       }
     }
   }
   leftSlot TinkerbotsCube {
+    name "cube3"
     leftSlot TinkerbotsMotor {
       rotation 0 0 1 1.5707996938995747
       name "BLwheel"
@@ -115,6 +122,7 @@ TinkerbotsBase {
     }
   }
   rightSlot TinkerbotsCube {
+    name "cube4"
     leftSlot TinkerbotsMotor {
       rotation 0 0 1 -1.5707950010791611
       name "FRwheel"

@@ -21,7 +21,7 @@ wb_camera_enable(camera, TIME_STEP);
 
 %% MAIN ACTIONS
 for i = 0:2
-s=43*i
+s=43*i;
   while wb_robot_step(TIME_STEP) ~= -1
     t = wb_robot_get_time();
     vidlice_down;
@@ -63,6 +63,10 @@ reset = wb_robot_get_time();
 while(wb_robot_step(TIME_STEP) ~= -1)
 r = wb_robot_get_time()-reset;
 throttle(-5,-5,-5,-5);
+if r > 15
+vidlice_up;
+throttle(-20,-20,20,20); %easter egg - points
+end
 end
 
 %%FUNCTIONS
