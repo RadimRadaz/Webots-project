@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.670196021922049 -0.7297705105339402 -0.13517505004582947 0.44060327753574124
-  position -0.1953376941561365 0.7400020098863023 2.49292841504989
+  orientation -0.430198682596977 -0.8931250306439744 -0.1313650376965851 0.561632462760594
+  position -0.9226918306160817 1.3287428971032464 3.333364049754973
 }
 TexturedBackground {
   texture "factory"
@@ -73,10 +73,10 @@ AdvertisingBoard {
   translation 1.53 -0.01 0.78
   rotation -9.58979e-09 1 9.5898e-09 -1.5707953071795862
   frontTexture [
-    "D:/VUT/1PA/bb.png"
+    "D:/VUT/1PA/bigbro.jpg"
   ]
   backTexture [
-    "D:/VUT/1PA/bb.png"
+    "D:/VUT/1PA/bigbro.jpg"
   ]
   displayWidth 0.4
   displayHeight 0.3

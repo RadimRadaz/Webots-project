@@ -30,10 +30,10 @@ while wb_robot_step(TIME_STEP) ~= -1
   % Process here sensor data, images, etc.
 actual_dist = wb_distance_sensor_get_value(sensor);
 if actual_dist < 0.6
-  wb_motor_set_velocity(flag, 5);
+  wb_motor_set_velocity(flag, 3);
   wb_motor_set_position(flag, 0);
 else
-  wb_motor_set_velocity(flag, 5);
+  wb_motor_set_velocity(flag, 3);
   wb_motor_set_position(flag, -pi/2.01);
 end
   % send actuator commands, e.g.:
