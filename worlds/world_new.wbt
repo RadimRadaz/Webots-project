@@ -3,26 +3,99 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.578598799805451 -0.8002976040029943 -0.15731234500432006 5.683837927120362
-  position 0.5288323070012041 0.4019103000070938 2.078126367766648
+  orientation 0.9047653928796244 0.4143903347813243 0.09838818164393952 5.931352480898921
+  position -0.10508683790880363 0.7879643326404838 2.5711311689206253
 }
 TexturedBackground {
   texture "factory"
 }
 TexturedBackgroundLight {
-  texture "stadium"
+  texture "mars"
 }
-Floor {
+DEF __ Floor {
   tileSize 1 1
+  appearance Parquetry {
+    type "light strip"
+    colorOverride 0.5 0.5 0.5
+  }
+}
+AdvertisingBoard {
+  translation 1.53 -0.01 0.78
+  rotation -9.58979e-09 1 9.5898e-09 -1.5707953071795862
+  frontTexture [
+    "D:/VUT/1PA/image.jpg"
+  ]
+  backTexture [
+    "D:/VUT/1PA/bb.png"
+  ]
+  displayWidth 0.4
+  displayHeight 0.3
+  poleNumber 1
+  poleType "box"
+  poleHeight 1.4
+  baseRatio 1.8
+}
+WoodenPallet {
+  translation 0.581084 -6.52829e-07 0.951611
+  rotation 3.207493372569604e-07 0.999999999999895 3.272327984184193e-07 1.550800088806173
+  name "wooden pallet(2)"
+  size 0.075 0.045 0.05
+  mass 0.005
+}
+Wall {
+  translation -0.19 0 0
+  size 0.05 0.25 0.75
+}
+Wall {
+  translation 0.199999 0.27 -0.02
+  rotation 0 0 1 1.5708
+  name "wall(3)"
+  size 0.05 0.42 0.8
+}
+Wall {
+  translation 0.17 0 0
+  name "wall(1)"
+  size 0.05 0.25 0.75
+}
+Wall {
+  translation -0.01 0 -0.399998
+  rotation 0 1 0 1.5708
+  name "wall(2)"
+  size 0.05 0.25 0.4
 }
 TinkerbotsBase {
-  hidden linearVelocity_0 1.9248713714196699e-10 2.9785676198573294e-05 1.4941873237900685e-07
-  hidden angularVelocity_0 -1.0206507943771663e-07 -5.305798194659012e-12 -7.332955410184563e-09
-  translation 1.6812091965893308e-09 0.026162232704803372 1.31999998123687
-  rotation 0.9983685741773222 2.866294795969276e-06 0.057098074283860864 -1.1214986424396964e-06
+  translation -0.00339993 0.0283574 0.01474
+  rotation -0.9999981793676445 0.001828020327888297 0.0005473600981788702 -0.001775307179586072
+  controller "robot1_controller"
+  upSlot TinkerbotsCube {
+  }
+  downSlot TinkerbotsCube {
+    upSlot TinkerbotsPivot {
+      name "kloub1"
+      slot TinkerbotsPivot {
+        name "kloub2"
+        slot TinkerbotsPivot {
+          name "vidlice"
+          ASlot TinkerbotsFinger {
+            rotation 0 0 1 -1.1781003061004252
+            name "finger1"
+          }
+          DSlot TinkerbotsFinger {
+            rotation 0 0 1 2.7488996938995744
+            name "finger2"
+          }
+        }
+      }
+    }
+    frontSlot TinkerbotsCube {
+      frontSlot TinkerbotsCube {
+      }
+    }
+  }
   leftSlot TinkerbotsCube {
     leftSlot TinkerbotsMotor {
       rotation 0 0 1 1.5707996938995747
+      name "BLwheel"
       frontSlot TinkerbotsAxle {
         endSlot TinkerbotsWheel {
         }
@@ -30,6 +103,7 @@ TinkerbotsBase {
     }
     rightSlot TinkerbotsMotor {
       rotation 0 0 1 -1.5707996938995747
+      name "FLwheel"
       frontSlot TinkerbotsAxle {
         endSlot TinkerbotsWheel {
         }
@@ -38,22 +112,38 @@ TinkerbotsBase {
   }
   rightSlot TinkerbotsCube {
     leftSlot TinkerbotsMotor {
-      rotation 0 0 1 1.5708003061004252
-      frontSlot TinkerbotsAxle {
+      rotation 0 0 1 -1.5707950010791611
+      name "FRwheel"
+      backSlot TinkerbotsAxle {
         endSlot TinkerbotsWheel {
         }
       }
     }
     rightSlot TinkerbotsMotor {
-      rotation 0 0 1 -1.5707996938995747
-      frontSlot TinkerbotsAxle {
+      rotation 0 0 1 1.5707996938995747
+      name "BRwheel"
+      backSlot TinkerbotsAxle {
         endSlot TinkerbotsWheel {
         }
       }
     }
   }
+  extensionSlot [
+    Camera {
+      translation 0 0.04 -0.05
+    }
+  ]
 }
 WoodenPallet {
-  translation 0 0 1.48
-  size 0.08 0.008 0.08
+  translation 0.588284 -4.21889e-07 0.591683
+  rotation 3.207493372569604e-07 0.999999999999895 3.272327984184193e-07 1.550800088806173
+  size 0.075 0.045 0.05
+  mass 0.005
+}
+WoodenPallet {
+  translation 0.584684 -5.37359e-07 0.771647
+  rotation 3.207493372569604e-07 0.999999999999895 3.272327984184193e-07 1.550800088806173
+  name "wooden pallet(1)"
+  size 0.075 0.045 0.05
+  mass 0.005
 }
