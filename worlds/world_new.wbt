@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.6989392939581957 0.696058087778417 0.16427721022549782 5.639133410006545
-  position -1.5126249410649226 2.332760189656054 4.324682992798539
+  orientation 0.4505545213680262 0.883084781182123 0.13100340651811695 5.745370022300699
+  position -1.1491263706988082 1.3597933214609352 3.597320819898335
 }
 TexturedBackground {
   texture "factory"
@@ -19,11 +19,15 @@ DEF __ Floor {
     colorOverride 0.5 0.5 0.5
   }
 }
+TinkerbotsBase {
+  translation -0.26 0.02 0.46
+  name "Tinkerbots(1)"
+}
 AdvertisingBoard {
   translation 1.53 -0.01 0.78
   rotation -9.58979e-09 1 9.5898e-09 -1.5707953071795862
   frontTexture [
-    "D:/VUT/1PA/image.jpg"
+    "D:/VUT/1PA/bb.png"
   ]
   backTexture [
     "D:/VUT/1PA/bb.png"
@@ -36,7 +40,7 @@ AdvertisingBoard {
   baseRatio 1.8
 }
 WoodenPallet {
-  translation 0.611078 -6.52829e-07 0.952211
+  translation 0.581084 -6.52829e-07 0.951611
   rotation 3.207493372569604e-07 0.999999999999895 3.272327984184193e-07 1.550800088806173
   name "wooden pallet(2)"
   size 0.075 0.045 0.05
@@ -87,6 +91,10 @@ TinkerbotsBase {
         }
       }
     }
+    frontSlot TinkerbotsCube {
+      frontSlot TinkerbotsCube {
+      }
+    }
   }
   leftSlot TinkerbotsCube {
     leftSlot TinkerbotsMotor {
@@ -124,6 +132,11 @@ TinkerbotsBase {
       }
     }
   }
+  extensionSlot [
+    Camera {
+      translation 0 0.04 -0.05
+    }
+  ]
 }
 WoodenPallet {
   translation 0.588284 -4.21889e-07 0.591683
@@ -132,7 +145,7 @@ WoodenPallet {
   mass 0.005
 }
 WoodenPallet {
-  translation 0.594682 -5.37359e-07 0.771847
+  translation 0.584684 -5.37359e-07 0.771647
   rotation 3.207493372569604e-07 0.999999999999895 3.272327984184193e-07 1.550800088806173
   name "wooden pallet(1)"
   size 0.075 0.045 0.05
