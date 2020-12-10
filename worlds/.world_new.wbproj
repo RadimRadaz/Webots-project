@@ -5,7 +5,7 @@ sceneTreePerspectives: 000000ff0000000100000002000000c0000000fa01000000020100000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 0 "controllers/robot1_controller/robot1_controller.m"
+textFiles: 0 "controllers/robot1_controller/robot1_controller.m" "controllers/robot2_controller/robot2_controller.m"
 globalOptionalRendering: DistanceSensorRays::CameraFrustums
 consoles: Console:All:All
 renderingDevicePerspectives: Tinkerbots:camera;1;3.17188;0;0.732026

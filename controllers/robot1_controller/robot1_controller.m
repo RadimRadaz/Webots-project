@@ -65,7 +65,10 @@ r = wb_robot_get_time()-reset;
 throttle(-5,-5,-5,-5);
 if r > 15
 vidlice_up;
-throttle(-20,-20,20,20); %easter egg - points
+throttle(-10,-10,10,10); %easter egg - points
+kloub1 = wb_robot_get_device('kloub1');
+wb_motor_set_velocity(kloub1,10);
+wb_motor_set_position(kloub1,randn(1)*(pi/2));
 end
 end
 
@@ -97,7 +100,7 @@ wb_motor_set_velocity(vidlice,0.5);
 
 wb_motor_set_position(kloub1,-pi/4);
 wb_motor_set_position(kloub2,pi/4);
-wb_motor_set_position(vidlice,-pi/12);
+wb_motor_set_position(vidlice,-pi/13);
 end
 
 function [] = throttle(FL, BL, FR, BR)
