@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.5957102621642106 0.791731686644807 0.13524133951871467 5.82234150355938
-  position -0.5957618659643813 0.8090655597960167 3.2595308984895626
+  orientation -0.670196021922049 -0.7297705105339402 -0.13517505004582947 0.44060327753574124
+  position -0.1953376941561365 0.7400020098863023 2.49292841504989
 }
 TexturedBackground {
   texture "factory"
@@ -19,11 +19,61 @@ DEF __ Floor {
     colorOverride 0.5 0.5 0.5
   }
 }
+TinkerbotsBase {
+  translation 0.44 0.0200017 1.15
+  rotation 0.9999999999977711 2.1113999999952937e-06 -2.3974499999946562e-09 3.14159
+  name "Tinkerbots(1)"
+  controller "robot2_controller"
+  upASlot TinkerbotsBrickAdapter {
+    name "brick adapter1"
+  }
+  downASlot TinkerbotsBrickAdapter {
+    name "brick adapter2"
+  }
+  leftASlot TinkerbotsBrickAdapter {
+    name "brick adapter3"
+  }
+  rightASlot TinkerbotsBrickAdapter {
+    name "brick adapter4"
+  }
+  backSlot TinkerbotsCube {
+    leftSlot TinkerbotsPivot {
+      rotation 0 0 1 -1.5707996938995747
+      name "flag"
+      ASlot TinkerbotsFinger {
+        rotation 0 0 1 1.5707996938995747
+        name "f"
+      }
+      BSlot TinkerbotsFinger {
+        rotation 0 0 1 3.141592653589793
+        name "fi"
+      }
+      CSlot TinkerbotsFinger {
+        rotation 0 0 1 -1.5707996938995747
+        name "fin"
+      }
+      DSlot TinkerbotsFinger {
+        name "fing"
+      }
+    }
+  }
+  extensionSlot [
+    DistanceSensor {
+      translation 2e-08 -0.01 0.02
+      rotation 0 1 0 -1.5708003061004252
+      name "ds"
+      lookupTable [
+        0 0 0
+        0.7 0.7 0
+      ]
+    }
+  ]
+}
 AdvertisingBoard {
   translation 1.53 -0.01 0.78
   rotation -9.58979e-09 1 9.5898e-09 -1.5707953071795862
   frontTexture [
-    "D:/VUT/1PA/image.jpg"
+    "D:/VUT/1PA/bb.png"
   ]
   backTexture [
     "D:/VUT/1PA/bb.png"
@@ -68,8 +118,10 @@ TinkerbotsBase {
   rotation -0.9999981793676445 0.001828020327888297 0.0005473600981788702 -0.001775307179586072
   controller "robot1_controller"
   upSlot TinkerbotsCube {
+    name "cube1"
   }
   downSlot TinkerbotsCube {
+    name "cube2"
     upSlot TinkerbotsPivot {
       name "kloub1"
       slot TinkerbotsPivot {
@@ -87,8 +139,15 @@ TinkerbotsBase {
         }
       }
     }
+    frontSlot TinkerbotsCube {
+      name "cube5"
+      frontSlot TinkerbotsCube {
+        name "cube6"
+      }
+    }
   }
   leftSlot TinkerbotsCube {
+    name "cube3"
     leftSlot TinkerbotsMotor {
       rotation 0 0 1 1.5707996938995747
       name "BLwheel"
@@ -107,6 +166,7 @@ TinkerbotsBase {
     }
   }
   rightSlot TinkerbotsCube {
+    name "cube4"
     leftSlot TinkerbotsMotor {
       rotation 0 0 1 -1.5707950010791611
       name "FRwheel"
@@ -124,12 +184,22 @@ TinkerbotsBase {
       }
     }
   }
+  extensionSlot [
+    Camera {
+      translation 0 0.04 -0.05
+    }
+  ]
 }
 WoodenPallet {
   translation 0.588284 -4.21889e-07 0.591683
   rotation 3.207493372569604e-07 0.999999999999895 3.272327984184193e-07 1.550800088806173
   size 0.075 0.045 0.05
   mass 0.005
+}
+OilBarrel {
+  translation 0.44 0.06 0.42
+  height 0.088
+  radius 0.0305
 }
 WoodenPallet {
   translation 0.584684 -5.37359e-07 0.771647
