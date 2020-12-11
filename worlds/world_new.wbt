@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.39436278522209817 -0.9105180866337826 -0.12423690089753699 0.5624054858163354
-  position -1.1160882325281922 1.3691748820828649 3.5867466621479274
+  orientation -0.6132513034865483 -0.7664822797186684 -0.19086056074873747 0.7093114098255473
+  position -1.1869379593204121 2.2063119282739843 3.424623209137326
 }
 TexturedBackground {
   texture "factory"
@@ -20,15 +20,21 @@ DEF __ Floor {
     colorOverride 0.5 0.5 0.5
   }
 }
+ConveyorBelt {
+  translation 0.59 0 0.07
+  rotation 0 1 0 -1.5707953071795862
+  size 0.7 0.03 0.15
+  speed 0.1
+}
 OilBarrel {
-  translation 0.44 0.06 0.12
+  translation 0.42 0.06 0.12
   rotation 0 1 0 1.5708
   name "oil barrel(3)"
   height 0.088
   radius 0.0305
 }
 OilBarrel {
-  translation 0.54 0.06 0.29
+  translation 0.27 0.06 0.29
   name "oil barrel(2)"
   height 0.088
   radius 0.0305

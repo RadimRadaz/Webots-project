@@ -22,7 +22,6 @@ wb_camera_enable(camera, TIME_STEP);
 %% MAIN ACTIONS
 for i = 0:2 %changeable loop
 s=43*i;
-
 disp("---------" + newline + "Palette " + (i+1));
   while wb_robot_step(TIME_STEP) ~= -1
     t = wb_robot_get_time();
@@ -67,7 +66,7 @@ r = wb_robot_get_time()-reset;
 throttle(-5,-5,-5,-5);
 if r > 15
 vidlice_up;
-throttle(-10,-10,10,10); %easter egg - points
+throttle(-10,-10,10,10); %easter egg
 kloub1 = wb_robot_get_device('kloub1');
 wb_motor_set_velocity(kloub1,10);
 wb_motor_set_position(kloub1,randn(1)*(pi/2));
