@@ -1,7 +1,7 @@
 % MATLAB controller for Webots
 % File:          robot1_controller.m
 % Date:
-% Description: brain damage
+% Description: BDSM
 % Author: 
 % Modifications:
 
