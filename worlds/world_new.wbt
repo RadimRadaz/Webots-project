@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.430198682596977 -0.8931250306439744 -0.1313650376965851 0.561632462760594
-  position -0.9226918306160817 1.3287428971032464 3.333364049754973
+  orientation -0.39436278522209817 -0.9105180866337826 -0.12423690089753699 0.5624054858163354
+  position -1.1160882325281922 1.3691748820828649 3.5867466621479274
 }
 TexturedBackground {
   texture "factory"
@@ -13,11 +13,32 @@ TexturedBackgroundLight {
   texture "mars"
 }
 DEF __ Floor {
+  size 5 5
   tileSize 1 1
   appearance Parquetry {
     type "light strip"
     colorOverride 0.5 0.5 0.5
   }
+}
+OilBarrel {
+  translation 0.44 0.06 0.12
+  rotation 0 1 0 1.5708
+  name "oil barrel(3)"
+  height 0.088
+  radius 0.0305
+}
+OilBarrel {
+  translation 0.54 0.06 0.29
+  name "oil barrel(2)"
+  height 0.088
+  radius 0.0305
+}
+OilBarrel {
+  translation 0.36598 0.06 0.235
+  rotation 0 1 0 1.0472
+  name "oil barrel(1)"
+  height 0.088
+  radius 0.0305
 }
 TinkerbotsBase {
   translation 0.44 0.0200017 1.15
@@ -198,6 +219,13 @@ WoodenPallet {
 }
 OilBarrel {
   translation 0.44 0.06 0.42
+  height 0.088
+  radius 0.0305
+}
+OilBarrel {
+  translation 0.31 0.06 0.04
+  rotation 0 1 0 -1.5707953071795862
+  name "oil barrel(4)"
   height 0.088
   radius 0.0305
 }

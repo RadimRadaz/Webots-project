@@ -20,8 +20,10 @@ wb_camera_enable(camera, TIME_STEP);
 % and leave the loop when Webots signals the termination
 
 %% MAIN ACTIONS
-for i = 0:2
+for i = 0:2 %changeable loop
 s=43*i;
+
+disp("---------" + newline + "Palette " + (i+1));
   while wb_robot_step(TIME_STEP) ~= -1
     t = wb_robot_get_time();
     vidlice_down;
