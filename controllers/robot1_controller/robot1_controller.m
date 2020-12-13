@@ -1,7 +1,7 @@
 % MATLAB controller for Webots
 % File:          robot1_controller.m
 % Date:
-% Description: BDSM/ Mr. Palette
+% Description: BDSM
 % Author: Radim Zlámal/ Petr Čagan
 % Modifications:
 
