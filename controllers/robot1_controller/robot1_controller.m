@@ -1,8 +1,8 @@
 % MATLAB controller for Webots
 % File:          robot1_controller.m
 % Date:
-% Description: BDSM
-% Author: 
+% Description: BDSM/ Mr. Palette
+% Author: Radim Zlámal/ Petr Čagan
 % Modifications:
 
 % uncomment the next two lines if you want to use
@@ -10,7 +10,7 @@
 %desktop;
 %keyboard;
 
-TIME_STEP = 64; %ms
+TIME_STEP = 64; % ms
 
 % get and enable devices, e.g.:
 camera = wb_robot_get_device('camera');
@@ -20,9 +20,9 @@ wb_camera_enable(camera, TIME_STEP);
 % and leave the loop when Webots signals the termination
 
 %% MAIN ACTIONS
-for i = 0:2 %changeable loop
+for i = 0:2 % changeable loop
 s=43*i;
-disp("---------" + newline + "Palette " + (i+1));
+disp("---------" + newline + "Palette " + (i+1)); % MATLAB window
   while wb_robot_step(TIME_STEP) ~= -1
     t = wb_robot_get_time();
     vidlice_down;
@@ -53,7 +53,7 @@ disp("---------" + newline + "Palette " + (i+1));
     end
   end
   % read the sensors, e.g.:
-  %rgb = wb_camera_get_image(camera);
+  % rgb = wb_camera_get_image(camera);
   % Process here sensor data, images, etc.
   % send actuator commands, e.g.:
   % if your code plots some graphics, it needs to flushed like this:
@@ -66,14 +66,14 @@ r = wb_robot_get_time()-reset;
 throttle(-5,-5,-5,-5);
 if r > 15
 vidlice_up;
-throttle(-10,-10,10,10); %easter egg
+throttle(-10,-10,10,10); % easter egg
 kloub1 = wb_robot_get_device('kloub1');
 wb_motor_set_velocity(kloub1,10);
 wb_motor_set_position(kloub1,randn(1)*(pi/2));
 end
 end
 
-%%FUNCTIONS
+%% FUNCTIONS
 function [] = vidlice_down()
 throttle(0,0,0,0)
 vidlice = wb_robot_get_device('vidlice');
@@ -121,7 +121,7 @@ wb_motor_set_velocity(BRwheel, BR);
 wb_motor_set_velocity(BLwheel, BL);
 end
 
-function [] = turn(FL, BL, FR, BR) %optional
+function [] = turn(FL, BL, FR, BR) % optional
 FLwheel = wb_robot_get_device('FLwheel');
 FRwheel = wb_robot_get_device('FRwheel');
 BLwheel = wb_robot_get_device('BLwheel');

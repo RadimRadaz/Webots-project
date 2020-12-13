@@ -26,10 +26,10 @@ wb_distance_sensor_enable(sensor, TIME_STEP);
 while wb_robot_step(TIME_STEP) ~= -1
 
   % read the sensors, e.g.:
-  %  rgb = wb_camera_get_image(camera);
+  % rgb = wb_camera_get_image(camera);
   % Process here sensor data, images, etc.
 actual_dist = wb_distance_sensor_get_value(sensor);
-if actual_dist < 0.6
+if actual_dist < 0.6 % measured threshold (+-)
   wb_motor_set_velocity(flag, 3);
   wb_motor_set_position(flag, 0);
 else
@@ -37,11 +37,10 @@ else
   wb_motor_set_position(flag, -pi/2.01);
 end
   % send actuator commands, e.g.:
-  %  wb_motor_set_postion(motor, 10.0);
+  % wb_motor_set_postion(motor, 10.0);
 
   % if your code plots some graphics, it needs to flushed like this:
   drawnow;
-
 end
 
 % cleanup code goes here: write data to files, etc.
